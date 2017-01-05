@@ -1,0 +1,1 @@
+"use strict";var mod=require("./lib");console.log(mod.counter),mod.incCounter(),console.log(mod.counter),module.exports="exports lib",require("./other");

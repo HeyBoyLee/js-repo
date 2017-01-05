@@ -1,0 +1,1 @@
+"use strict";var target={a:1},source1={b:2},source2={c:3};Object.assign(target,source1,source2),console.log(target);var obj1={a:{b:1}},obj2=Object.assign({},obj1);console.log(Object.is(obj1.a,obj2.a)),console.log(Object.is(obj1,obj2));var obj3=Object.assign({},{source1:source1,source2:source2});console.log(obj3),obj3.source1.b=4,console.log(source1);

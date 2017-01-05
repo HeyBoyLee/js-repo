@@ -1,0 +1,1 @@
+"use strict";console.log(Object.is("foo","foo")),Object.is({},{});

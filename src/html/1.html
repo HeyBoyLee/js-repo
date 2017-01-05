@@ -1,0 +1,13 @@
+<!--
+    验证html的加载过程
+    main_is.js -> alert("main_is.js");
+    先弹出框后,才渲染hello world。
+    下载/解析 ,渲染
+-->
+<head>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./sub.js"></script>
+</head>
+<body>
+    <h1>hello world!</h1>
+</body>

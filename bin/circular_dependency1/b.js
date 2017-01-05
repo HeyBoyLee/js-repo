@@ -1,0 +1,1 @@
+"use strict";function bar(){console.log("bar"),Math.random()>.5&&(0,_a.foo)()}Object.defineProperty(exports,"__esModule",{value:!0}),exports.bar=bar;var _a=require("./a.js");

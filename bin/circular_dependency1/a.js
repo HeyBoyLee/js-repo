@@ -1,0 +1,1 @@
+"use strict";function foo(){console.log("foo"),(0,_b.bar)(),console.log("执行完毕")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.foo=foo;var _b=require("./b.js");foo();

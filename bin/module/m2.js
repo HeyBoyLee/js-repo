@@ -1,0 +1,1 @@
+"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function incCounter(){exports.counter=counter+=1}Object.defineProperty(exports,"__esModule",{value:!0}),exports.counter=void 0,exports.incCounter=incCounter;var _m=require("./m1"),_m2=_interopRequireDefault(_m);console.log(_m2.default);var counter=exports.counter=3;

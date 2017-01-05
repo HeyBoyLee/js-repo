@@ -1,0 +1,10 @@
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.getJSON("http://127.0.0.1:8001/jsonp/ajax?callback=?",  //#跨域调用
+        function(data) {
+           // $('#rjsonp').val('Jsonp info : ' + data.status);
+            alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
+        });
+    });
+</script>

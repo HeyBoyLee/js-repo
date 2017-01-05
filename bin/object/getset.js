@@ -1,0 +1,1 @@
+"use strict";function Field(e){this.value=e}Field.prototype={get value(){return console.log("get"),this._value},set value(e){console.log("set"),this._value=e}};var field=new Field("test");field.value="test2",console.log(field.value);

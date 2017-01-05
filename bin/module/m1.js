@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _m=require("./m2");console.log(_m.counter),(0,_m.incCounter)(),console.log(_m.counter),exports.default="m2";

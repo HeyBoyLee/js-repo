@@ -1,0 +1,1 @@
+"use strict";function main(){console.log("main")}setTimeout(function(){document.write("<h2>I'm main_is.js</h2>")},500),sub();

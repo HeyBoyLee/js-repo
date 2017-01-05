@@ -1,0 +1,1 @@
+"use strict";function incCounter(){module.exports.counter=++counter}var main=require("./main");console.log(main);var counter=3;module.exports={counter:counter,incCounter:incCounter};
