@@ -10,13 +10,13 @@
  */
 var co = require('co');
 var Redis = require('ioredis');
-//var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
-var redisClient = new Redis({sentinels:[
-  {host:"127.0.0.1",port:"26379"} ,
-  {host:"127.0.0.1",port:"26479"},
-  {host:"127.0.0.1",port:"26579"}],
-  name:"def_master",
-});
+var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
+// var redisClient = new Redis({sentinels:[
+//   {host:"127.0.0.1",port:"26379"} ,
+//   {host:"127.0.0.1",port:"26479"},
+//   {host:"127.0.0.1",port:"26579"}],
+//   name:"def_master",
+// });
 
 redisClient.scan(0 , 'match' , 'li*' ,'count' , 3, function(err , res){
   console.log(res);

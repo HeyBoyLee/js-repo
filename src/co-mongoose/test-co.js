@@ -25,17 +25,18 @@ var schema = new mongoose.Schema({
 var model = db.model(collection, schema, collection);
 
 mongooseRedisCache(mongoose , redisClient);
-
-co(function* gen() {
+var c = '海淀区';
+function *gen(c) {
   try {
-    var b = yield model.findOne({city:'海淀区'}).lean();
+    var b = yield model.findOne({city: c}).lean();
     //var b = yield Promise.reject(new Error('b 错误'));
     console.log(b);
-  } catch(e) {
+  } catch (e) {
     console.log('error', e);
   }
   return 'over';
-}).then(function (value) {
+}
+co(gen(c)).then(function (value) {
   console.log(value);
 }).catch(function (err) {
   console.error(err.stack);
