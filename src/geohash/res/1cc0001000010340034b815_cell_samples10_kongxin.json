@@ -1,0 +1,760 @@
+{
+  "err": false,
+  "infocode": 10000,
+  "info": "OK",
+  "radius": 500,
+  "optimizeLevel": 0,
+  "cells": [
+    {
+      "key": "1cc00000000102800007122",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.325461964,
+          40.0301455091
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000102800007d5f",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.330916952,
+          40.0298856164
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000102800007863",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332637722,
+          40.0227532014
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000010280000877f",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332753161,
+          40.0243434476
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000102801130c04",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331952255,
+          40.0223054727
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000102801333102",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.330851853,
+          40.0303203436
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000102801332c01",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.33282922,
+          40.0246794174
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000010280163ef04",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333607113,
+          40.0248715813
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000010280163ef06",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331607586,
+          40.0224305857
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011ac01649802",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.32303817326903,
+          40.03052392439474
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c00000bce5",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322940766,
+          40.0297251714
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c000008e34",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323744093,
+          40.0297879393
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c001331f02",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322587064,
+          40.026883056
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c00163c301",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.33126008,
+          40.022197633
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c00163be03",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.3228720280742,
+          40.02702381340775
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007554",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332665667,
+          40.0272655833
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007708",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333224258,
+          40.0275417097
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe0000784f",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332576649,
+          40.0280630541
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007a3c",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332743106,
+          40.0261562276
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe0000769d",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333218125,
+          40.027544625
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007851",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332930783,
+          40.0263169565
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007def",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333242526,
+          40.0276335789
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000a0240112949f",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322650565,
+          40.0302672662
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00000000a027013d9771",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322895256,
+          40.0257681395
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010340040be83",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.330189145,
+          40.0220522545
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000100100497b83",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.32245815,
+          40.0275708058
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010010049df79",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.32362071846929,
+          40.03023502527451
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc000100001001004a7479",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333286088,
+          40.0296890885
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010010049c783",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.33090176,
+          40.0296417686
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010d50000b24a",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333169519,
+          40.0272889223
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010d500112b67",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.32506367386647,
+          40.02969741223565
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0001000010d5004e591b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.3250054330724,
+          40.02976041392992
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e00112973",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322944357,
+          40.0285353492
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e00112b67",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.324961231,
+          40.0304643077
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e00112cf7",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.329100847,
+          40.0303713218
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e00112d01",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.332171839,
+          40.0300477816
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5674",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.330938162,
+          40.0304664755
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e578c",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.326346541,
+          40.0301079179
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5728",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323743094,
+          40.0297106812
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e578e",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.325530308,
+          40.0303835897
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e573c",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322120575,
+          40.0269228584
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e578d",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.326761543,
+          40.02990114
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5729",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323342586,
+          40.0296868345
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e578b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.326355534,
+          40.0302243826
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5d09",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322877569,
+          40.029392931
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5d07",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323665,
+          40.0297626786
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004e5d1d",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.3230165,
+          40.024734625
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e004eb807",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331568055,
+          40.0300830667
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a03e005b55ad",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.33263251324422,
+          40.023244172716645
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a04b004e528b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331594952,
+          40.0302544048
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a079001128b7",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333426982,
+          40.027006382
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114b1f",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.330577944,
+          40.0221781312
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c41",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323018692,
+          40.0246105385
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c42",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323043722,
+          40.0243524444
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c4d",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323025977,
+          40.0246108168
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c4c",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322952674,
+          40.0247249333
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c4b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322622845,
+          40.0247727853
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a07900114c4e",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323036408,
+          40.0246004789
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a079004e528b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331658719,
+          40.0302399219
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a079004e55a1",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322424462,
+          40.0282146667
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a079004e5727",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.323064422,
+          40.0292595076
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc00010000a079005b5803",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.331012864,
+          40.0300718182
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc36000000000100002331",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322623702,
+          40.0297067193
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c00000e219",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.322908486,
+          40.0291819943
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007fa2",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.333142909,
+          40.0264920909
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011c00114610b",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.329879029,
+          40.0219974
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe000082a4",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.3327946,
+          40.0263617333
+        ]
+      },
+      "accuracy": -1
+    },
+    {
+      "key": "1cc0000000011fe00007c08",
+      "loc": {
+        "type": "Point",
+        "coordinates": [
+          116.327626333,
+          40.030461381
+        ]
+      },
+      "accuracy": -1
+    }
+  ],
+  "wifis": [],
+  "v": "0",
+  "bluetooth": []
+}

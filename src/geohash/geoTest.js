@@ -67,7 +67,7 @@ var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
 //   readPreference : "secondary",
 //   auth: "SCRAM-SHA-1",
 //   user: "wlf",
-//   pwd: "ms10vif"
+//   pass: "ms10vif"
 // });
 
 var collection = 'wifi_position';

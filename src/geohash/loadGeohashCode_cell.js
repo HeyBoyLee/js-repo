@@ -23,22 +23,26 @@ var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
 //   pass: "ms10vif"
 // });
 
-var collection = 'wifi_position';
+var collection = 'cell_position';
 var schema = new mongoose.Schema({
+  key: String,
+  mcc: Number,
+  mnc: Number,
+  lac: Number,
+  cid: Number,
   loc: {
     type: { type :String },
     coordinates: [Number]
   },
-  imeiCount: Number,
-  updateDate: Date,
-  loc_geohash: String,
-  bssid: String,
-  ssid: String
+  diam: Number,
+  samples: Number,
+  accuracy: Number
 });
+
 
 var model = db.model(collection, schema, collection);
 
-var FIELD = 'metok-geofence-wifi';
+var FIELD = 'metok-geofence-cell';
 var ONE = 9;
 var FILE = './city'+(ONE-1)+'/test.json';
 var START = 0; //不变
@@ -95,18 +99,18 @@ function* readFile(s, e){
 
     if(1){
       arr = arr.map(function(c){return new RegExp('^'+c)});
-      var result = yield model.find({loc_geohash:{$in:arr}},{_id:0, deviceType:0});
-      var obj = {};
+      var result = yield model.find({loc_geohash:{$in:arr}},{_id:0});
 
+      var obj = {};
       if(result.length >0){
         result = JSON.parse(JSON.stringify(result));
         logger.info('[%d] result length:%d, element:%s geohash=%s', process.pid, result.length, arr[arr.length -1], result[result.length-1].loc_geohash);
       }
 
       _.each(result, function(v){
-        var key = v.loc_geohash.substr(0,8);
-        filter(key, v, obj);
-        // filter(v.loc_geohash, v, obj);
+        // var key = v.loc_geohash.substr(0,8);
+        // filter(key, v, obj);
+        filter(v.loc_geohash, v, obj);
       });
     }
     logger.info('[%d]已读行数：%d', process.pid, (POSITION)/ONE);
@@ -123,16 +127,16 @@ function* readFile(s, e){
 function filter(k, v, obj){
   if(obj[k]){
     var o = obj[k];
-    if(v.updateDate > o.updateDate){
-      obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-      redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
-    }else if(v.imeiCount > o.imeiCount){
-      obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-      redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+    if(v.calculateDate > o.calculateDate){
+      obj[k] = {samples: v.samples, calculateDate: v.calculateDate, key: v.key};
+      redisClient.hset(FIELD, k, JSON.stringify({key:v.key, loc: v.loc.coordinates}));
+    }else if(v.samples > o.samples){
+      obj[k] = {samples: v.samples, calculateDate: v.calculateDate, key: v.key};
+      redisClient.hset(FIELD, k, JSON.stringify({key:v.key, loc: v.loc.coordinates}));
     }
   }else{
     obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-    redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+    redisClient.hset(FIELD, k, JSON.stringify({key:v.key, loc: v.loc.coordinates}));
   }
 }
 
