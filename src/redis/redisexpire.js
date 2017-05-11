@@ -1,6 +1,6 @@
 var Redis = require('ioredis');
 var co = require('co');
-var client = new Redis({"host":"127.0.0.1", "port":"6379"});
+// var client = new Redis({"host":"10.232.46.24", "port":"7001"});
 //var client = new Redis({"host":"10.232.46.56", "port":"6379"});
 // Redis (error) NOAUTH Authentication required
 // var client = new Redis({sentinels:[
@@ -10,12 +10,11 @@ var client = new Redis({"host":"127.0.0.1", "port":"6379"});
 //   });
 
 // ok
-// var client = new Redis({sentinels:[
-//     {host:"127.0.0.1",port:"26379"} ,
-//     {host:"127.0.0.1",port:"26479"},
-//     {host:"127.0.0.1",port:"26579"}],
-//   name:"def_master",
-//   });
+var client = new Redis({sentinels:[
+  {host:"10.232.46.24",port:"37001"},
+  {host:"10.232.46.24",port:"37002"}],
+  name:"core",
+  });
 co(getHi);
 function* getHi(){
   var hi = yield client.get('hi');

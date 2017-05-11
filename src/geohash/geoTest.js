@@ -46,29 +46,6 @@ Date.prototype.Format = function (fmt) {
 //geohash.bboxes (minlat, minlon, maxlat, maxlon, precision=9)
 
 var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
-// "db": {
-//   "info":{
-//     "replica": true,
-//       "addr": "10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020",
-//       "rsName": "miuisysMetokRs",
-//       "auth": true,
-//       "authMechanism": "SCRAM-SHA-1"
-//   },
-//   "name":{
-//     "metok_auth": {"user": "authapp", "pwd": "ms13auth"},
-//     "metok_core": {"user": "wlf", "pwd": "ms10vif"},
-//     "geofence": {"user": "geofenceGeofence", "pwd": "RzHiir92"},
-//     "metok_user": {"user": "geofenceMetokUser", "pwd": "JgyX6TVQ"},
-//     "user_info": {"user": "appuserinfo", "pwd": "ms12345"}
-//   }
-// }
-// var db = mongoose.createConnection("mongodb://10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020/metok_core", {
-//   replset: "miuisysMetokRs",
-//   readPreference : "secondary",
-//   auth: "SCRAM-SHA-1",
-//   user: "wlf",
-//   pass: "ms10vif"
-// });
 
 var collection = 'wifi_position';
 var schema = new mongoose.Schema({
