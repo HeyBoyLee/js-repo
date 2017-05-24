@@ -6,11 +6,11 @@ var gulp = require('gulp'),
 gulp.task('babel' , function(){
   gulp.src('./src/**/*.js')
     .pipe(babel({presets:['es2015']}))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./build-js'))
 });
 
 gulp.task('uglify' , ['babel'],function(){
-  gulp.src('./build/**/*.js')
+  gulp.src('./build-js/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./bin'))
 });

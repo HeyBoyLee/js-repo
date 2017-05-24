@@ -84,7 +84,7 @@ exports.protocol = parser.protocol;
 exports.connect = lookup;
 
 /**
- * Expose constructors for standalone build.
+ * Expose constructors for standalone build-js.
  *
  * @api public
  */
@@ -7147,7 +7147,7 @@ function toArray(list, index) {
 		'decode': utf8decode
 	};
 
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
+	// Some AMD build-js optimizers, like r.js, check for specific condition patterns
 	// like the following:
 	if (
 		typeof define == 'function' &&
