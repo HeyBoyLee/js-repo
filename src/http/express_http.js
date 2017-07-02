@@ -5,7 +5,7 @@
 var express = require('express');
 var https = require('https');
 var http = require('http');
-var bodyparser = require('body-parser');
+// var bodyparser = require('body-parser');
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var responseTime = require('response-time')
@@ -69,6 +69,8 @@ app.post('/submit', function(req, res){
 
 //var server = https.createServer(credentials,app);
 var server = http.createServer(app);
+server.on('connection', function(){})
+
 server.listen(8001, function(){
   console.log("server running at https://IP_ADDRESS:8001/")
 });

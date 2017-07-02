@@ -1,0 +1,127 @@
+Testing v8 version different from logging version
+Statistical profiling result from isolate-0x102002000-v8.log, (46575 ticks, 2711 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  43704   93.8%          /Users/apple/Downloads/node-v6.2.0/node
+     23    0.0%          /usr/lib/system/libsystem_kernel.dylib
+     14    0.0%          /usr/lib/system/libsystem_malloc.dylib
+     12    0.0%          /usr/lib/system/libsystem_c.dylib
+      7    0.0%          /usr/lib/system/libsystem_platform.dylib
+      4    0.0%          /usr/lib/system/libsystem_pthread.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.0%    0.2%  Builtin: CallFunction_ReceiverIsAny
+      3    0.0%    0.1%  Stub: FastNewObjectStub
+      3    0.0%    0.1%  LazyCompile: ~removeListener events.js:310:28
+      3    0.0%    0.1%  LazyCompile: ~OutgoingMessage._storeHeader _http_outgoing.js:190:50
+      2    0.0%    0.1%  Stub: RegExpExecStub
+      2    0.0%    0.1%  Stub: LoadConstantStub
+      2    0.0%    0.1%  Stub: CallConstructStub
+      2    0.0%    0.1%  LazyCompile: ~resOnFinish _http_server.js:496:25
+      2    0.0%    0.1%  LazyCompile: ~parserOnIncoming _http_server.js:460:28
+      2    0.0%    0.1%  LazyCompile: ~flow _stream_readable.js:759:14
+      2    0.0%    0.1%  LazyCompile: ~OutgoingMessage.end _http_outgoing.js:532:41
+      2    0.0%    0.1%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+      2    0.0%    0.1%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+      1    0.0%    0.0%  Stub: VectorStoreICStub
+      1    0.0%    0.0%  Stub: ToBooleanStub
+      1    0.0%    0.0%  Stub: StringCompareStub
+      1    0.0%    0.0%  Stub: StringAddStub_CheckNone_NotTenured
+      1    0.0%    0.0%  Stub: StoreTransitionStub {1}
+      1    0.0%    0.0%  Stub: StoreTransitionStub
+      1    0.0%    0.0%  Stub: RecordWriteStub {1}
+      1    0.0%    0.0%  Stub: RecordWriteStub
+      1    0.0%    0.0%  Stub: LoadICStub
+      1    0.0%    0.0%  Stub: LoadFieldStub
+      1    0.0%    0.0%  Stub: LoadConstantStub {4}
+      1    0.0%    0.0%  Stub: LoadConstantStub {3}
+      1    0.0%    0.0%  Stub: LoadConstantStub {2}
+      1    0.0%    0.0%  Stub: LoadConstantStub {1}
+      1    0.0%    0.0%  Stub: InstanceOfStub
+      1    0.0%    0.0%  Stub: FastNewStrictArgumentsStub
+      1    0.0%    0.0%  Stub: FastCloneShallowArrayStub
+      1    0.0%    0.0%  Stub: CompareICStub {2}
+      1    0.0%    0.0%  Stub: CompareICStub {1}
+      1    0.0%    0.0%  Stub: CompareICStub
+      1    0.0%    0.0%  Stub: CEntryStub
+      1    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub {1}
+      1    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub
+      1    0.0%    0.0%  RegExp: [\\r\\n]
+      1    0.0%    0.0%  LazyCompile: ~toLowerCase native string.js:344:29
+      1    0.0%    0.0%  LazyCompile: ~spliceOne events.js:466:19
+      1    0.0%    0.0%  LazyCompile: ~setPrototypeOf native v8natives.js:570:30
+      1    0.0%    0.0%  LazyCompile: ~set native collection.js:252:16
+      1    0.0%    0.0%  LazyCompile: ~send /Users/apple/repo/js-repo/node_modules/express/lib/response.js:106:25
+      1    0.0%    0.0%  LazyCompile: ~parseurl /Users/apple/repo/js-repo/node_modules/express/node_modules/parseurl/index.js:40:18
+      1    0.0%    0.0%  LazyCompile: ~onParserExecuteCommon _http_server.js:377:33
+      1    0.0%    0.0%  LazyCompile: ~insert timers.js:119:16
+      1    0.0%    0.0%  LazyCompile: ~expressInit /Users/apple/repo/js-repo/node_modules/express/lib/middleware/init.js:29:30
+      1    0.0%    0.0%  LazyCompile: ~exports.runInThisContext vm.js:52:36
+      1    0.0%    0.0%  LazyCompile: ~contentType /Users/apple/repo/js-repo/node_modules/express/lib/response.js:553:32
+      1    0.0%    0.0%  LazyCompile: ~_addListener events.js:210:22
+      1    0.0%    0.0%  LazyCompile: ~Socket.write net.js:645:34
+      1    0.0%    0.0%  LazyCompile: ~Socket._writeGeneric net.js:654:42
+      1    0.0%    0.0%  LazyCompile: ~OutgoingMessage.write _http_outgoing.js:424:43
+      1    0.0%    0.0%  LazyCompile: ~Mime.lookup /Users/apple/repo/js-repo/node_modules/express/node_modules/send/node_modules/mime/mime.js:69:33
+      1    0.0%    0.0%  LazyCompile: ~MapFindEntry native collection.js:45:22
+      1    0.0%    0.0%  LazyCompile: ~IncomingMessage._addHeaderLines _http_incoming.js:94:53
+      1    0.0%    0.0%  LazyCompile: ~Buffer.isEncoding buffer.js:312:29
+      1    0.0%    0.0%  LazyCompile: ~Buffer.from buffer.js:123:23
+      1    0.0%    0.0%  LazyCompile: handle /Users/apple/repo/js-repo/node_modules/express/lib/router/layer.js:86:49
+      1    0.0%    0.0%  LazyCompile: *get native collection.js:239:16
+      1    0.0%    0.0%  LazyCompile: *exports._unrefActive timers.js:109:32
+      1    0.0%    0.0%  KeyedStoreIC: A keyed store IC from the snapshot
+      1    0.0%    0.0%  KeyedLoadIC: A keyed load IC from the snapshot
+      1    0.0%    0.0%  Handler: split
+      1    0.0%    0.0%  Handler: runInThisContext
+      1    0.0%    0.0%  Handler: removeListener
+      1    0.0%    0.0%  Handler: read
+      1    0.0%    0.0%  Handler: pop
+      1    0.0%    0.0%  Handler: complete
+      1    0.0%    0.0%  Handler: client
+      1    0.0%    0.0%  Handler: callback
+      1    0.0%    0.0%  Handler: arrayLimit
+      1    0.0%    0.0%  Handler: Array
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {3}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {2}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {1}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot
+      1    0.0%    0.0%  Builtin: InterruptCheck
+      1    0.0%    0.0%  Builtin: FunctionPrototypeApply
+      1    0.0%    0.0%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      1    0.0%    0.0%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+    100    0.2%    3.6%  JavaScript
+      0    0.0%    0.0%  C++
+     13    0.0%    0.5%  GC
+  43764   94.0%          Shared libraries
+   2711    5.8%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+  43704   93.8%  /Users/apple/Downloads/node-v6.2.0/node
+  43660   99.9%    /Users/apple/Downloads/node-v6.2.0/node
+  43410   99.4%      LazyCompile: ~pbkdf2 crypto.js:564:16
+  22914   52.8%        LazyCompile: ~exports.pbkdf2Sync crypto.js:555:30
+  22596   98.6%          LazyCompile: handle /Users/apple/repo/js-repo/node_modules/express/lib/router/layer.js:86:49
+  22596  100.0%            LazyCompile: ~next /Users/apple/repo/js-repo/node_modules/express/lib/router/route.js:114:16
+  20496   47.2%        LazyCompile: *exports.pbkdf2Sync crypto.js:555:30
+  20496  100.0%          LazyCompile: handle /Users/apple/repo/js-repo/node_modules/express/lib/router/layer.js:86:49
+  20496  100.0%            LazyCompile: ~next /Users/apple/repo/js-repo/node_modules/express/lib/router/route.js:114:16
+
+   2711    5.8%  UNKNOWN
+
