@@ -1,5 +1,7 @@
 var express = require('express');
 var co = require("co");
+var crypto = require('crypto');
+var md5 = crypto.createHash('md5');
 var router = express.Router();
 var mongoBasedao = require('../dao/mongoBasedao');
 var connectionName = "test";

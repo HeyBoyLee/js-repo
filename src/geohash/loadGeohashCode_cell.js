@@ -15,14 +15,6 @@ var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
 
 var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
 
-// var db = mongoose.createConnection("mongodb://10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020/metok_core", {
-//   replset: "miuisysMetokRs",
-//   readPreference : "secondary",
-//   auth: "SCRAM-SHA-1",
-//   user: "wlf",
-//   pass: "ms10vif"
-// });
-
 var collection = 'cell_position';
 var schema = new mongoose.Schema({
   key: String,
@@ -42,7 +34,7 @@ var schema = new mongoose.Schema({
 
 var model = db.model(collection, schema, collection);
 
-var FIELD = 'metok-geofence-cell';
+var FIELD = 'metok-geofence-cell-test';
 var ONE = 9;
 var FILE = './city'+(ONE-1)+'/test.json';
 var START = 0; //不变
@@ -51,7 +43,7 @@ var POSITION=0;//164902680;
 // var updateDateLen =0;
 // var imeiCountLen =0;
 // var setNum = 0;
-var workerNum = 3;
+var workerNum = 1;
 var startLine = 0;
 var endLine = execSync('wc -l '+FILE);
 endLine = Number(endLine.toString().split(' ')[0]);
@@ -99,7 +91,7 @@ function* readFile(s, e){
 
     if(1){
       arr = arr.map(function(c){return new RegExp('^'+c)});
-      var result = yield model.find({loc_geohash:{$in:arr}},{_id:0});
+      var result = yield model.find({loc_geohash:{$in:arr}, samples:{$gt:6}},{_id:0});
 
       var obj = {};
       if(result.length >0){
@@ -107,10 +99,12 @@ function* readFile(s, e){
         logger.info('[%d] result length:%d, element:%s geohash=%s', process.pid, result.length, arr[arr.length -1], result[result.length-1].loc_geohash);
       }
 
+      result = _.sortBy(result, [function(o){return -o.samples}]);
+
       _.each(result, function(v){
-        // var key = v.loc_geohash.substr(0,8);
-        // filter(key, v, obj);
-        filter(v.loc_geohash, v, obj);
+        var key = v.loc_geohash.substr(0,8);
+        filter(key, v, obj);
+        //filter(v.loc_geohash, v, obj);
       });
     }
     logger.info('[%d]已读行数：%d', process.pid, (POSITION)/ONE);

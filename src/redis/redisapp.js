@@ -12,13 +12,14 @@ var co = require('co');
 var Redis = require('ioredis');
 var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
 // var redisClient = new Redis({sentinels:[
-//   {host:"127.0.0.1",port:"26379"} ,
-//   {host:"127.0.0.1",port:"26479"},
-//   {host:"127.0.0.1",port:"26579"}],
-//   name:"def_master",
+//   {host:"10.232.46.24",port:"37001"},
+//   {host:"10.232.46.24",port:"37002"},
+//   {host:"10.232.46.24",port:"37003"}],
+//   name:"core",
 // });
 
-redisClient.scan(0 , 'match' , 'li*' ,'count' , 3, function(err , res){
+redisClient.scan(0  ,'count' , 3, function(err , res){
+  console.log(res instanceof Array);
   console.log(res);
 });
 
@@ -27,7 +28,7 @@ function* scan(){
   console.log('**********');
   console.log(result);
 }
-//co(scan());
+co(scan());
 console.log(2222);
 var f = scan.bind(this);
 var gen = f();

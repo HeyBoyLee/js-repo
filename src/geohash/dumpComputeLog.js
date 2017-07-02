@@ -7,13 +7,7 @@ var fs = require('fs');
 var co = require('co');
 var Redis = require('ioredis');
 
-var db = mongoose.createConnection("mongodb://10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020/metok_server", {
-  replset: "miuisysMetokRs",
-  readPreference : "secondary",
-  auth: "SCRAM-SHA-1",
-  user: "wlf",
-  pass: "ms10vif"
-});
+var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
 
 var collection = 'apiStatistic';
 var schema = mongoose.Schema({

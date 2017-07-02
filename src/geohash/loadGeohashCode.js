@@ -13,6 +13,15 @@ var logger = require('tracer').console();
 var open = thunkify(fs.open);
 var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
 
+// var redisClient = new Redis.Cluster([
+//   {host:'10.118.29.53',port:9128},
+//   {host:'10.118.29.53',port:9129},
+//   {host:'10.118.15.29',port:9130},
+//   {host:'10.118.15.29',port:9131},
+//   {host:'10.118.15.28',port:9132},
+//   {host:'10.118.15.28',port:9133}
+// ]);
+
 var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
 
 // var db = mongoose.createConnection("mongodb://10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020/metok_core", {
@@ -95,18 +104,35 @@ function* readFile(s, e){
 
     if(1){
       arr = arr.map(function(c){return new RegExp('^'+c)});
-      var result = yield model.find({loc_geohash:{$in:arr}},{_id:0, deviceType:0});
+      var result = yield model.find({loc_geohash:{$in:arr}, imeiCount:{$gt:2}},{_id:0, deviceType:0});
       var obj = {};
-
+      // yield redisClient.hexists(FIELD, 'wtmww3p1k');
       if(result.length >0){
         result = JSON.parse(JSON.stringify(result));
         logger.info('[%d] result length:%d, element:%s geohash=%s', process.pid, result.length, arr[arr.length -1], result[result.length-1].loc_geohash);
       }
+      result = _.sortBy(result, [function(o){return -o.imeiCount}]);
 
+      //-------------------------------
+      //15*15m filter wifi
+      // for(var j=0;j<result.length;j++){
+      //   var b = false;
+      //   var v = result[j];
+      //   var n = geohash.neighbors(v.loc_geohash);
+      //   for(var i=0;i<n.length;i++){
+      //     var x = yield redisClient.hexists(FIELD, n[i]);
+      //     if(x) {
+      //       b = true;
+      //       break;
+      //     }
+      //   }
+      //   if(!b) filter(v.loc_geohash, v, obj);
+      // }
+      //-------------------------------
       _.each(result, function(v){
         var key = v.loc_geohash.substr(0,8);
         filter(key, v, obj);
-        // filter(v.loc_geohash, v, obj);
+        // if(!b) filter(v.loc_geohash, v, obj);
       });
     }
     logger.info('[%d]已读行数：%d', process.pid, (POSITION)/ONE);
@@ -125,14 +151,25 @@ function filter(k, v, obj){
     var o = obj[k];
     if(v.updateDate > o.updateDate){
       obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-      redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+      cset(k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+      //hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
     }else if(v.imeiCount > o.imeiCount){
       obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-      redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+      cset(k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+      //hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
     }
   }else{
     obj[k] = {imeiCount: v.imeiCount, date: v.updateDate, bssid: v.bssid};
-    redisClient.hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+    cset(k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
+    //hset(FIELD, k, JSON.stringify({bssid:v.bssid, loc: v.loc.coordinates, acc: Math.ceil(v.accuracy)||-1}));
   }
+}
+
+function hset(f , k , s){
+  redisClient.hset(f, k, s);
+}
+
+function cset(k, s){
+  redisClient.set(k, s);
 }
 

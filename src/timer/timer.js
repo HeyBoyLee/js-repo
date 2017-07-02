@@ -22,7 +22,7 @@ setTimeout(function(){
     });
     setTimeout(function(){
       console.log(8);
-    });
+    },0);
   });
 },0);
 
@@ -35,23 +35,23 @@ setTimeout(function(){
 
 
 process.nextTick(function(){
-  console.log(2)
+  console.log(2);
   process.nextTick(function(){
     console.log(11);
   })
 });
 
 process.nextTick(function(){
-  console.log(7)
+  console.log(7);
   setTimeout(function(){
-    console.log(5)
+    console.log(5);
     setTimeout(function(){
       console.log(9)
-    });
-  });
+    },0);
+  },0);
 });
 
-console.log(10)
+console.log(10);
 
 
 // 2 1 4 5 6 3

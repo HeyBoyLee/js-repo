@@ -8,7 +8,7 @@ var fs = require('fs');
 var co = require('co');
 var Redis = require('ioredis');
 var redisClient = new Redis([{"host":"127.0.0.1", "port":"6379"}]);
-var FILE = '1cc0001000010340034b815_cell_samples10_kongxin';
+var FILE = 'b815_1000m';
 var res = require('./res/'+FILE);
 Date.prototype.Format = function (fmt) {
   var o = {
@@ -28,29 +28,6 @@ Date.prototype.Format = function (fmt) {
 
 
 var db = mongoose.createConnection("mongodb://127.0.0.1:27017/metok_core");
-// "db": {
-//   "info":{
-//     "replica": true,
-//       "addr": "10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020",
-//       "rsName": "miuisysMetokRs",
-//       "auth": true,
-//       "authMechanism": "SCRAM-SHA-1"
-//   },
-//   "name":{
-//     "metok_auth": {"user": "authapp", "pwd": "ms13auth"},
-//     "metok_core": {"user": "wlf", "pwd": "ms10vif"},
-//     "geofence": {"user": "geofenceGeofence", "pwd": "RzHiir92"},
-//     "metok_user": {"user": "geofenceMetokUser", "pwd": "JgyX6TVQ"},
-//     "user_info": {"user": "appuserinfo", "pwd": "ms12345"}
-//   }
-// }
-// var db = mongoose.createConnection("mongodb://10.118.35.2:27020,10.118.36.2:27020,10.118.38.29:27020,10.136.5.44:27020/metok_core", {
-//   replset: "miuisysMetokRs",
-//   readPreference : "secondary",
-//   auth: "SCRAM-SHA-1",
-//   user: "wlf",
-//   pass: "ms10vif"
-// });
 
 var schema = new mongoose.Schema({
   key: String,
@@ -110,7 +87,7 @@ function gen_excel_no_db(){
   var i =0;
   _.each(cells,function(v){
     try{
-      var c = v.loc.coordinates;
+      var c = v.loc;
       var d = [++i, c[0], c[1], '谷歌'];
       data.push(d);
     }catch(e){
